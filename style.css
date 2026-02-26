@@ -1,12 +1,20 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'roboto', sans-serif;
 }
 
 body {
     background-color: white;
     color: black;
 }
+
+.logo {
+    gap: 5px;
+    padding-left: 0px;
+
+}
+
 
 
 .left {
@@ -17,6 +25,7 @@ body {
 
 .right {
     width: 75vw;
+    margin: 16px 0;
 }
 
 
@@ -28,5 +37,106 @@ body {
     display: flex;
     gap: 15px;
     padding-top: 14px;
+    font-weight: bold;
 
+}
+
+.heading {
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+    padding: 23px 14px;
+    font-size: 13px;
+    font-weight: bold;
+    align-items: center
+}
+
+.heading img {
+    width: 30px;
+}
+
+.library {
+    min-height: 80vh;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    color: grey;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+.footer a {
+    color: grey;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 34);
+
+}
+
+
+
+.header>* {
+    padding: 20px;
+}
+
+.spotifyplaylist {
+    padding: 16px;
+}
+
+.cardcontainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+
+}
+
+.card>* {
+    padding-top: 10px;
+
+
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.card .play {
+    width: 28px;
+    height: 28px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 273px;
+    right: 17px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.card:hover .play {
+    opacity: 1;
+    top: 168px;
 }
