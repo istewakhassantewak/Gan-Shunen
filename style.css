@@ -26,6 +26,7 @@ body {
 .right {
     width: 75vw;
     margin: 16px 0;
+    position: relative;
 }
 
 
@@ -97,6 +98,8 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     margin: 30px;
+    max-height: 70vh;
+    overflow-y: scroll;
 }
 
 .card {
@@ -105,6 +108,7 @@ body {
     border-radius: 5px;
     background-color: #252525;
     position: relative;
+
 
 }
 
@@ -139,4 +143,61 @@ body {
 .card:hover .play {
     opacity: 1;
     top: 168px;
+}
+
+.buttons>* {
+    margin: 0 12px;
+}
+
+.signupbtn {
+    background-color: rgb(34, 34, 34);
+    ;
+    color: rgb(156, 148, 148);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.signupbtn:hover {
+    font-size: 17px;
+    color: white;
+}
+
+.loginbtn {
+    background-color: white;
+    border-radius: 21px;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    width: 79px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.loginbtn:hover {
+
+
+    width: 80px;
+
+    font-size: 17px;
+}
+
+
+
+.playbar {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(139, 193, 139);
+    width: 100%;
+    padding: 12px;
+
+}
+
+.songbuttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
 }
