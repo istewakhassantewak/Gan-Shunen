@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: black;
     color: black;
 }
 
@@ -15,7 +15,16 @@ body {
 
 }
 
+.hamburger {
+    display: none;
+}
 
+.hamburgercontainer {
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    display: flex;
+}
 
 .left {
     width: 25vw;
@@ -83,7 +92,9 @@ body {
 
 }
 
-
+.close {
+    display: none;
+}
 
 .header>* {
     padding: 20px;
@@ -93,13 +104,18 @@ body {
     padding: 16px;
 }
 
+.spotifyplaylist h1 {
+    padding: 16px;
+}
+
 .cardcontainer {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     margin: 30px;
     max-height: 70vh;
-    overflow-y: scroll;
+    overflow-y: auto;
+
 }
 
 .card {
@@ -206,7 +222,7 @@ body {
     width: 70vw;
     padding: 12px;
     filter: invert(1);
-    height: 40px;
+    min-height: 40px;
 }
 
 .songbuttons {
@@ -244,13 +260,14 @@ body {
 }
 
 .seekbar {
-    height: 2px;
+    height: 4px;
     width: 98%;
     background: black;
     position: absolute;
     bottom: 0;
     border-radius: 10px;
     margin: 6px;
+    cursor: pointer;
 }
 
 .circle {
@@ -266,4 +283,77 @@ body {
 
 .songbuttons img {
     cursor: pointer;
+}
+
+.songinfo,
+.songtime {
+    color: black;
+    padding: 0 12px;
+    width: 250px;
+}
+
+.abovebar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20PX 0;
+
+}
+
+@media (max-width: 1400px) {
+    .left {
+        background-color: black;
+        position: absolute;
+        left: -120%;
+        transition: all .3s;
+        z-index: 1;
+        width: 370px;
+    }
+
+    .left .close {
+        position: absolute;
+        right: 31px;
+        top: 25px;
+        width: 29px;
+    }
+
+    .right {
+        width: 100vw;
+    }
+
+    .playbar {
+        width: calc(100vw - 75px);
+    }
+
+    .seekbar {
+        width: calc(100vw - 85px);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .card {
+        width: 90vw;
+    }
+
+    .close {
+        display: block;
+    }
+
+    .right {
+        margin: 0;
+    }
+
+    .cardcontainer {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .abovebar {
+        flex-direction: column;
+        gap: 23px;
+        align-items: center;
+    }
+
+
 }
