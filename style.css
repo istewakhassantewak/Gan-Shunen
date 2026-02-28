@@ -1,3 +1,7 @@
+:root {
+    --a: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -124,8 +128,15 @@ body {
     border-radius: 5px;
     background-color: #252525;
     position: relative;
+    transition: all .9s;
 
 
+}
+
+.card:hover {
+    background-color: rgb(105, 103, 103);
+    cursor: pointer;
+    --a: 1;
 }
 
 .card>* {
@@ -139,7 +150,7 @@ body {
     object-fit: contain;
 }
 
-.card .play {
+.play {
     width: 28px;
     height: 28px;
     background-color: #1fdf64;
@@ -150,16 +161,13 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 273px;
+    top: 168px;
     right: 17px;
-    opacity: 0;
+    opacity: var(--a);
     transition: all 1s ease-out;
 }
 
-.card:hover .play {
-    opacity: 1;
-    top: 168px;
-}
+
 
 .buttons>* {
     margin: 0 12px;
@@ -236,6 +244,10 @@ body {
     width: 344px;
 }
 
+.info .div {
+    word-break: break-all;
+}
+
 .songlist {
     height: 544px;
     overflow: auto;
@@ -285,11 +297,30 @@ body {
     cursor: pointer;
 }
 
-.songinfo,
-.songtime {
+.timevol {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.songinfo {
     color: black;
     padding: 0 12px;
     width: 250px;
+}
+
+.songtime {
+    color: black;
+    padding: 0 12px;
+    width: 125px;
+}
+
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
 }
 
 .abovebar {
@@ -299,7 +330,7 @@ body {
 
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .left {
         background-color: black;
         position: absolute;
@@ -307,6 +338,7 @@ body {
         transition: all .3s;
         z-index: 1;
         width: 370px;
+        padding: 0;
     }
 
     .left .close {
@@ -333,7 +365,7 @@ body {
     }
 
     .card {
-        width: 90vw;
+        width: 44vw;
     }
 
     .close {
@@ -355,5 +387,23 @@ body {
         align-items: center;
     }
 
+    .songinfo,
+    .songtime {
+        width: auto;
+    }
 
+    .timevol {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+}
+
+@media (max-width:400px) {
+    .card {
+        width: 84vw;
+    }
 }
