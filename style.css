@@ -117,7 +117,7 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     margin: 30px;
-    max-height: 70vh;
+    max-height: 60vh;
     overflow-y: auto;
 
 }
@@ -161,7 +161,7 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 168px;
+    bottom: 88px;
     right: 17px;
     opacity: var(--a);
     transition: all 1s ease-out;
@@ -231,6 +231,9 @@ body {
     padding: 12px;
     filter: invert(1);
     min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .songbuttons {
@@ -276,7 +279,7 @@ body {
     width: 98%;
     background: black;
     position: absolute;
-    bottom: 0;
+    bottom: 8px;
     border-radius: 10px;
     margin: 6px;
     cursor: pointer;
@@ -320,7 +323,11 @@ body {
     justify-content: center;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
+}
 
+.range input {
+    cursor: pointer;
 }
 
 .abovebar {
@@ -334,11 +341,14 @@ body {
     .left {
         background-color: black;
         position: absolute;
-        left: -120%;
+        left: -130%;
         transition: all .3s;
         z-index: 1;
         width: 370px;
         padding: 0;
+        height: 100vh;
+        top: 0;
+
     }
 
     .left .close {
@@ -354,6 +364,7 @@ body {
 
     .playbar {
         width: calc(100vw - 75px);
+
     }
 
     .seekbar {
@@ -362,10 +373,11 @@ body {
 
     .hamburger {
         display: block;
+        cursor: pointer;
     }
 
     .card {
-        width: 44vw;
+        width: 55vw;
     }
 
     .close {
@@ -379,6 +391,7 @@ body {
     .cardcontainer {
         margin: 0;
         justify-content: center;
+
     }
 
     .abovebar {
@@ -400,10 +413,49 @@ body {
         gap: 13px;
     }
 
+    .cardcontainer {
+
+        max-width: unset;
+        overflow-y: unset;
+        margin-bottom: 35vh;
+
+
+    }
+
+    .playbar {
+        right: 25px;
+
+    }
 }
 
-@media (max-width:400px) {
+@media (max-width:500px) {
     .card {
-        width: 84vw;
+        width: 100%;
+    }
+
+    .header>* {
+        padding: 2px;
+    }
+
+    .buttons>* {
+        margin: 0 6px;
+    }
+
+    .header {
+        padding: 7px;
+    }
+
+    .spotifyplaylist h1 {
+        padding: 4px;
+    }
+
+    .library {
+        height: 85vh;
+    }
+
+    .left {
+        position: fixed;
+        top: 0;
+        width: 100vw;
     }
 }
