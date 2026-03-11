@@ -17,8 +17,8 @@
             </div>
             <div class="home bggray m1 rounded p1">
                 <div class="logo m1 flex">
-                    <img style="width: 5vh;" class="invert" src="images/logo.svg" alt="">
-                    <h1 style="font-size: 2vh; padding-top: 1vh;">Gan Shunen</h1>
+                    <img class="logo-img invert" src="images/logo.svg" alt="">
+                    <h1 class="logo-title">Gan Shunen</h1>
                 </div>
                 <ul>
                     <li><img class="invert" src="images/home.svg" alt="Home">Home</li>
@@ -75,8 +75,8 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <button class="signupbtn">Sign Up</button>
-                    <button class="loginbtn">Log In</button>
+                    <button type="button" class="signupbtn">Sign Up</button>
+                    <button type="button" class="loginbtn">Log In</button>
                 </div>
             </div>
             <div class="spotifyplaylist">
@@ -104,7 +104,8 @@
                             <div class="volume">
                                 <img width="25" src="images/volume.svg" alt="">
                                 <div class="range">
-                                    <input type="range" name="volume">
+                                    <label for="volume-control">Volume</label>
+                                    <input type="range" id="volume-control" name="volume">
                                 </div>
                             </div>
                         </div>
