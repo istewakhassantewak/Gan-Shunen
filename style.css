@@ -16,7 +16,14 @@ body {
 .logo {
     gap: 5px;
     padding-left: 0px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 
+}
+
+.logo:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
 }
 
 .hamburger {
@@ -46,13 +53,216 @@ body {
 
 
 .home ul li {
-    width: 14px;
+    width: 100%;
     list-style: none;
     display: flex;
     gap: 15px;
     padding-top: 14px;
     font-weight: bold;
 
+}
+
+.navbtn {
+    border: none;
+    background: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.navbtn img {
+    width: 16px;
+    height: 16px;
+}
+
+.navbtn:hover {
+    color: #1fdf64;
+    transform: translateX(2px);
+}
+
+.top-controls {
+    margin: 0 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.search-wrap input {
+    flex: 1;
+    border-radius: 20px;
+    border: 1px solid #555;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 10px 12px;
+}
+
+.library-actions {
+    padding: 0 12px 12px;
+}
+
+.playlist-actions {
+    margin: 0;
+    padding: 4px 0 6px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 3;
+}
+
+.actionbtn {
+    border: none;
+    border-radius: 16px;
+    background: #1fdf64;
+    color: #111;
+    padding: 8px 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.actionbtn.secondary {
+    background: #333;
+    color: #fff;
+}
+
+.actionbtn.small {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.actionbtn.danger {
+    background: #c53030;
+    color: #fff;
+}
+
+.actionbtn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.actionbtn:active,
+.toggle-btn:active,
+.songbuttons img:active,
+.card:active {
+    transform: scale(0.98);
+}
+
+.list-actions,
+.card-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.active-playlist {
+    outline: 2px solid #1fdf64;
+    box-shadow: 0 0 0 2px rgba(31, 223, 100, 0.2);
+}
+
+.toggle-btn {
+    border: none;
+    border-radius: 14px;
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.25s ease;
+}
+
+.toggle-btn.active {
+    background: #1fdf64;
+    color: #111;
+}
+
+.auth-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.auth-gate {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, #111 0%, #050505 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    z-index: 30;
+}
+
+.auth-panel {
+    width: min(92vw, 400px);
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 16px;
+    color: #fff;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.gate-panel {
+    width: min(92vw, 460px);
+}
+
+.auth-subtitle {
+    margin: 6px 0 14px;
+    color: #b3b3b3;
+}
+
+.auth-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.auth-panel input {
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #111;
+    color: #fff;
+    padding: 8px;
+}
+
+.playlist-preview-wrap {
+    margin-top: 8px;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    background: #101010;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.playlist-preview-wrap img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.auth-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none !important;
 }
 
 .heading {
@@ -106,17 +316,33 @@ body {
 
 .spotifyplaylist {
     padding: 16px;
+    padding-bottom: 190px;
 }
 
 .spotifyplaylist h1 {
     padding: 16px;
 }
 
+.feedback {
+    min-height: 20px;
+    margin: 0 16px 8px;
+    color: #b3b3b3;
+    font-size: 13px;
+}
+
+.feedback.error {
+    color: #ff8a8a;
+}
+
+.feedback.loading {
+    color: #ffe066;
+}
+
 .cardcontainer {
     display: flex;
-    gap: 10px;
+    gap: 14px;
     flex-wrap: wrap;
-    margin: 30px;
+    margin: 24px 30px 18px;
     max-height: 60vh;
     overflow-y: auto;
 
@@ -128,15 +354,16 @@ body {
     border-radius: 5px;
     background-color: #252525;
     position: relative;
-    transition: all .9s;
+    transition: all .25s ease;
 
 
 }
 
 .card:hover {
-    background-color: rgb(105, 103, 103);
+    background-color: #353535;
     cursor: pointer;
     --a: 1;
+    transform: translateY(-2px);
 }
 
 .card>* {
@@ -147,7 +374,9 @@ body {
 
 .card img {
     width: 100%;
-    object-fit: contain;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 .play {
@@ -182,11 +411,11 @@ body {
     outline: none;
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.25s ease;
 
 }
 
 .signupbtn:hover {
-    font-size: 17px;
     color: white;
 }
 
@@ -199,14 +428,11 @@ body {
     width: 79px;
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.25s ease;
 }
 
 .loginbtn:hover {
-
-
-    width: 80px;
-
-    font-size: 17px;
+    filter: brightness(0.95);
 }
 
 .playnow {
@@ -272,6 +498,17 @@ body {
     margin: 12px 0;
     padding: 13px;
     border-radius: 5px;
+    transition: all 0.25s ease;
+}
+
+.songlist ul li:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: #9d9d9d;
+}
+
+.songlist ul li.active {
+    border-color: #1fdf64;
+    background-color: rgba(31, 223, 100, 0.14);
 }
 
 .seekbar {
@@ -298,6 +535,7 @@ body {
 
 .songbuttons img {
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .timevol {
@@ -328,6 +566,16 @@ body {
 
 .range input {
     cursor: pointer;
+}
+
+.range label {
+    color: #fff;
+}
+
+input:focus-visible,
+button:focus-visible {
+    outline: 2px solid #1fdf64;
+    outline-offset: 2px;
 }
 
 .abovebar {
@@ -417,9 +665,13 @@ body {
 
         max-width: unset;
         overflow-y: unset;
-        margin-bottom: 35vh;
+        margin-bottom: 30vh;
 
 
+    }
+
+    .playlist-actions {
+        justify-content: flex-start;
     }
 
     .playbar {
@@ -447,6 +699,10 @@ body {
 
     .spotifyplaylist h1 {
         padding: 4px;
+    }
+
+    .spotifyplaylist {
+        padding-bottom: 220px;
     }
 
     .library {

@@ -1,0 +1,132 @@
+{
+  "albums": [
+    {
+      "folder": "Angry_(mood)",
+      "title": "Angry Mood",
+      "description": "Calm your Anger",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-floatinggarden - Copy.mp3",
+        "bensound-floatinggarden.mp3"
+      ]
+    },
+    {
+      "folder": "Bright_(mood)",
+      "title": "Bright Songs",
+      "description": "Bright Songs for you",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-moonlightdrive - Copy (2).mp3",
+        "bensound-moonlightdrive - Copy.mp3"
+      ]
+    },
+    {
+      "folder": "Chill_(mood)",
+      "title": "Just Chill",
+      "description": "Yes, Just Chill",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-floatinggarden - Copy.mp3",
+        "bensound-floatinggarden.mp3",
+        "bensound-moonlightdrive - Copy (2).mp3"
+      ]
+    },
+    {
+      "folder": "Dark_(mood)",
+      "title": "Dark Horse",
+      "description": "Dark Songs for you",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-floatinggarden - Copy.mp3",
+        "bensound-floatinggarden.mp3"
+      ]
+    },
+    {
+      "folder": "Diljit",
+      "title": "Diljit Dosanjh",
+      "description": "Diljit Dosanjh hits",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-floatinggarden - Copy.mp3",
+        "bensound-floatinggarden.mp3"
+      ]
+    },
+    {
+      "folder": "Funky_(mood)",
+      "title": "Go Funky",
+      "description": "Lets go Funky",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-floatinggarden - Copy.mp3"
+      ]
+    },
+    {
+      "folder": "Love_(mood)",
+      "title": "I Love You",
+      "description": "Love is in the air",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-dawnofchange.mp3",
+        "bensound-floatinggarden - Copy (2).mp3",
+        "bensound-floatinggarden - Copy.mp3",
+        "bensound-moonlightdrive.mp3",
+        "bensound-slowlife - Copy (2).mp3",
+        "bensound-slowlife - Copy.mp3",
+        "bensound-slowlife.mp3"
+      ]
+    },
+    {
+      "folder": "Uplifting_(mood)",
+      "title": "Get up",
+      "description": "You can do it!",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-dawnofchange.mp3",
+        "bensound-floatinggarden - Copy (2).mp3",
+        "bensound-floatinggarden - Copy.mp3",
+        "bensound-moonlightdrive.mp3"
+      ]
+    },
+    {
+      "folder": "cs",
+      "title": "Copyright Songs",
+      "description": "Cover Songs for you",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-floatinggarden - Copy.mp3",
+        "bensound-floatinggarden.mp3",
+        "bensound-moonlightdrive - Copy (2).mp3",
+        "bensound-moonlightdrive - Copy.mp3"
+      ]
+    },
+    {
+      "folder": "karan aujla",
+      "title": "Karan Aujla",
+      "description": "Karan Aujla for you",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-floatinggarden - Copy.mp3"
+      ]
+    },
+    {
+      "folder": "ncs",
+      "title": "Sleep Songs",
+      "description": "Songs for you",
+      "cover": "cover.jpg",
+      "tracks": [
+        "bensound-dawnofchange - Copy (2).mp3",
+        "bensound-dawnofchange - Copy.mp3",
+        "bensound-dawnofchange.mp3",
+        "bensound-floatinggarden - Copy (2).mp3",
+        "bensound-floatinggarden - Copy.mp3",
+        "bensound-moonlightdrive.mp3",
+        "bensound-slowlife - Copy (2).mp3",
+        "bensound-slowlife - Copy.mp3",
+        "bensound-slowlife.mp3",
+        "bensound-yesterday - Copy (2).mp3",
+        "bensound-yesterday - Copy.mp3",
+        "bensound-yesterday.mp3"
+      ]
+    }
+  ]
+}

@@ -10,19 +10,19 @@
 </head>
 
 <body>
-  <div class="container flex bgblack">
+    <div id="app-shell" class="container flex bgblack hidden">
         <div class="left ">
             <div class="close">
                 <img class="invert" src="images/close.svg" alt="">
             </div>
             <div class="home bggray m1 rounded p1">
-                <div class="logo m1 flex">
-                    <img class="logo-img invert" src="images/logo.svg" alt="">
-                    <h1 class="logo-title">Gan Shunen</h1>
+                <div id="brand-home" class="logo m1 flex" role="button" tabindex="0" aria-label="Go to home">
+                    <img id="brand-logo" class="logo-img invert" src="images/music.svg" alt="">
+                    <h1 id="brand-title" class="logo-title">Gan Shunen</h1>
                 </div>
                 <ul>
-                    <li><img class="invert" src="images/home.svg" alt="Home">Home</li>
-                    <li><img class="invert" src="images/search.svg" alt="Search">Search</li>
+                    <li><button id="home-btn" class="navbtn"><img class="invert" src="images/home.svg" alt="Home">Home</button></li>
+                    <li><button id="focus-search-btn" class="navbtn"><img class="invert" src="images/search.svg" alt="Search">Search</button></li>
                 </ul>
             </div>
 
@@ -41,6 +41,9 @@
                     <ul>
 
                     </ul>
+                </div>
+                <div class="library-actions">
+                    <button id="add-music-btn" type="button" class="actionbtn">Add Music</button>
                 </div>
                 <div class="footer">
                     <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
@@ -81,6 +84,16 @@
             </div>
             <div class="spotifyplaylist">
                 <h1>Spotify Playlist</h1>
+                <div class="top-controls">
+                    <div class="search-wrap">
+                        <input id="search-input" type="text" placeholder="Search songs by title or artist">
+                        <button id="search-btn" type="button" class="actionbtn">Search</button>
+                    </div>
+                    <div class="playlist-actions">
+                        <button id="add-playlist-btn" type="button" class="actionbtn">+ Add Playlist</button>
+                    </div>
+                </div>
+                <div id="player-feedback" class="feedback" role="status" aria-live="polite"></div>
                 <div class="cardcontainer"> </div>
                 <div class="playbar">
                     <div class="seekbar">
@@ -96,6 +109,8 @@
                             <img width="35" id="previous" src="images/prevsong.svg" alt="">
                             <img width="35" id="play" src="images/play.svg" alt="">
                             <img width="35" id="next" src="images/nextsong.svg" alt="">
+                            <button id="shuffle-btn" type="button" class="toggle-btn">Shuffle</button>
+                            <button id="repeat-btn" type="button" class="toggle-btn">Repeat: Off</button>
                         </div>
                         <div class="timevol">
                             <div class="songtime">
@@ -120,5 +135,63 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <div id="auth-gate" class="auth-gate" aria-hidden="false">
+        <div class="auth-panel gate-panel">
+            <h2>Welcome to Gan Shunen</h2>
+            <p class="auth-subtitle">Login or create an account to continue.</p>
+            <form id="auth-form">
+                <label for="auth-email">Email</label>
+                <input id="auth-email" type="email" required autocomplete="email">
+                <label for="auth-password">Password</label>
+                <input id="auth-password" type="password" required minlength="6" autocomplete="current-password">
+                <label for="auth-name" id="auth-name-label" class="hidden">Display Name</label>
+                <input id="auth-name" type="text" class="hidden" minlength="2" maxlength="30" autocomplete="name">
+                <p id="auth-error" class="feedback error"></p>
+                <div class="auth-actions">
+                    <button id="auth-submit" type="submit" class="actionbtn">Login</button>
+                    <button id="auth-switch" type="button" class="actionbtn secondary">Switch to Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="playlist-modal" class="auth-modal hidden" aria-hidden="true">
+        <div class="auth-panel">
+            <h3>Create Playlist</h3>
+            <form id="playlist-form">
+                <label for="playlist-name">Playlist title</label>
+                <input id="playlist-name" type="text" required minlength="1" maxlength="40" placeholder="My Playlist">
+                <label for="playlist-description">Description</label>
+                <input id="playlist-description" type="text" maxlength="120" placeholder="What is this playlist about?">
+                <label for="playlist-cover">Cover image</label>
+                <input id="playlist-cover" type="file" accept="image/*">
+                <div class="playlist-preview-wrap">
+                    <img id="playlist-cover-preview" src="images/music.svg" alt="Playlist cover preview">
+                </div>
+                <p id="playlist-error" class="feedback error"></p>
+                <div class="auth-actions">
+                    <button id="playlist-submit" type="submit" class="actionbtn">Create</button>
+                    <button id="playlist-cancel" type="button" class="actionbtn secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="music-modal" class="auth-modal hidden" aria-hidden="true">
+        <div class="auth-panel">
+            <h3>Add Music</h3>
+            <form id="music-form">
+                <label for="music-title">Song title</label>
+                <input id="music-title" type="text" required minlength="1" maxlength="80" placeholder="Song title">
+                <label for="music-artist">Artist</label>
+                <input id="music-artist" type="text" required minlength="1" maxlength="80" placeholder="Artist name">
+                <label for="music-file">Audio file</label>
+                <input id="music-file" type="file" accept="audio/*" required>
+                <p id="music-error" class="feedback error"></p>
+                <div class="auth-actions">
+                    <button id="music-submit" type="submit" class="actionbtn">Add Song</button>
+                    <button id="music-cancel" type="button" class="actionbtn secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
 </body>
